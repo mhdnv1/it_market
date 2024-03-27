@@ -11,25 +11,30 @@
   list-style-type: none;
   text-decoration: none;
   resize: none;
-  background: #fff;
-  color: #000;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
 }
+
 .container {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.row{
+  display: flex;
+}
+
 @mixin text($cl , $fw , $fs , $lh) {
   color: $cl;
   font-weight: $fw;
   font-size: $fs;
   line-height: $lh;
 }
+
 $colorOrange : #FF9900;
 
 // components
