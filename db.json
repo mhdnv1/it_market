@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "укажи путь",
+      "title": "Товар 1",
+      "description": "VINTER 2020 ВИНТЕР 2020 Шкаф платяной 3-дверный 117x190 см",
+      "price": "1000",
+      "sale": "12",
+      "color": "black"
+    }
+  ],
+  "orders": [],
+  "users": []
+}
