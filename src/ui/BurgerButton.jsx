@@ -1,6 +1,6 @@
 const BurgerButton = () => {
   return (
-    <div style={{display: "inline"}}>
+    <div style={{display: "inline", cursor: "pointer"}}>
       <svg
         width="30"
         height="20"

@@ -1,0 +1,56 @@
+.first-block {
+  margin-top: 30px;
+  .row {
+    justify-content: space-between;
+  }
+  .col-4 {
+    width: 39%;
+    height: 100%;
+    h1 {
+      font-weight: 700;
+      font-size: 2.5vw;
+      line-height: 60px;
+      font-family: "Jost";
+    }
+    ul {
+      margin-top: 30px;
+      li {
+        font-size: 1.2rem;
+        list-style-position: inside;
+        list-style-type: disc;
+        margin-bottom: 0.8rem;
+        color: #ff9900;
+        span{
+            color: #000;
+        }
+    }
+    }
+    .furniture {
+      box-shadow: 0px 0px 10px 0px #0000000d inset;
+      height: 100%;
+      padding: 40px 50px;
+      border-radius: 60px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 20px;
+      border-radius: 75px;
+      margin-bottom: 20px;
+      color: #fff;
+      margin-top: 38px;
+      background-color: #ff9900;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .col-8 {
+    width: 59%;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 60px;
+    }
+  }
+}
