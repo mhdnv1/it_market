@@ -43,6 +43,11 @@
       background-color: #ff9900;
       border: none;
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      will-change: contents;
+      &:hover{
+        transform: scale(1.02);
+      }
     }
   }
   .col-8 {

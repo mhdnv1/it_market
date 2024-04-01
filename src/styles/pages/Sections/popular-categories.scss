@@ -16,6 +16,8 @@
 .category-card {
   cursor: pointer;
   padding: 20px;
+  will-change: contents;
+  transition: all 0.3s ease-in-out;
   h3 {
     font-weight: 400;
   }
