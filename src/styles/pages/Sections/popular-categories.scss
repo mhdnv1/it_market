@@ -1,0 +1,36 @@
+.popular-categories {
+  margin: 60px 0;
+  h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: "Jost";
+  }
+  .row {
+    gap: 25px;
+    .col-4 {
+      width: 25%;
+    }
+  }
+}
+
+.category-card {
+  cursor: pointer;
+  padding: 20px;
+  h3 {
+    font-weight: 400;
+  }
+  .row {
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-img {
+    display: flex;
+    justify-content: center;
+    img {
+      margin-bottom: 10px;
+      width: 65%;
+    }
+  }
+}
