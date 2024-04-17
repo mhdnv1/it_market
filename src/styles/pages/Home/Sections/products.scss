@@ -1,0 +1,92 @@
+.in-stock-products {
+  margin-top: 80px;
+  .row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .col-4 {
+      width: 24%;
+      margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: "Jost";
+    span {
+      color: red;
+    }
+    a {
+      margin-left: 10px;
+      font-size: 1rem;
+      color: #000;
+      font-weight: 400;
+      svg {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.products-card {
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  will-change: contents;
+  .row {
+    flex-direction: column;
+    h4 {
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 30px;
+    }
+
+    p {
+      width: 100%;
+      height: 80px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(180deg, transparent, #fff 90%);
+      }
+    }
+
+    b {
+      font-size: 1.6rem;
+      line-height: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .add-to-cart {
+      background-color: #ff9900;
+      width: 35px;
+      height: 35px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      margin-left: auto;
+      cursor: pointer;
+      svg {
+        width: 60%;
+        height: 60%;
+        fill: #fff;
+      }
+    }
+  }
+}

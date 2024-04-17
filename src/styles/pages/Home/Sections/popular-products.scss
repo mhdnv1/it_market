@@ -1,0 +1,29 @@
+.popular-products {
+    margin-top: 80px;
+    .row {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .col-4 {
+        width: 24%;
+      }
+    }
+  
+    h2 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: "Jost";
+      span {
+        color: red;
+      }
+      a {
+        margin-left: 10px;
+        font-size: 1rem;
+        color: #000;
+        font-weight: 400;
+        svg {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  

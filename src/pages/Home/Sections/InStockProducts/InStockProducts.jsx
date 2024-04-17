@@ -1,18 +1,18 @@
-import "@styles/pages/Home/Sections/discounts.scss";
-import { Link } from "react-router-dom";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useGetProductsQuery } from "@store/product";
-import DiscountCard from "./DiscountCard/DiscountCard";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
+import ProductCard from "./ProductCard/ProductCard";
+import "@styles/pages/Home/Sections/products.scss";
 
-const Discounts = () => {
+const InStockProducts = () => {
   const { data, isLoading, error } = useGetProductsQuery();
 
   return (
-    <section className="discounts">
+    <section className="in-stock-products">
       <div className="container">
         <div className="section-title">
           <h2>
-            Скидки <span>%</span>{" "}
+            Товары в наличии{" "}
             <Link>
               Все товары в категории <HiOutlineArrowLongRight />
             </Link>
@@ -25,17 +25,16 @@ const Discounts = () => {
             <>Загрузка...</>
           ) : (
             [...data]
+              .filter((item) => item.type == "phone")
               .sort(() => Math.random() - 0.5)
-              .slice(0, 4)
+              .slice(0, 12)
               .map((item) => (
                 <div className="col-4" key={item.id}>
-                  <DiscountCard
+                  <ProductCard
                     title={item.model}
                     description={item.description}
                     newPrice={item.price}
                     image={item.img}
-                    discount="12"
-                    oldPrice="10000"
                   />
                 </div>
               ))
@@ -46,4 +45,4 @@ const Discounts = () => {
   );
 };
 
-export default Discounts;
+export default InStockProducts;

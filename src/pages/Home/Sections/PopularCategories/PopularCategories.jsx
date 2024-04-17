@@ -1,4 +1,4 @@
-import "@styles/pages/Sections/popular-categories.scss";
+import "@styles/pages/Home/Sections/popular-categories.scss";
 import Laptop from "@images/laptoppng.parspng.com-4.png";
 import Phone from "@images/kindpng_4225211.png";
 import CategoryCard from "./CategoryCard/CategoryCard";

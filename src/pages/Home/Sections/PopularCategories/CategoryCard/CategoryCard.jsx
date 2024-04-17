@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "@styles/pages/Sections/popular-categories.scss";
+import "@styles/pages/Home/Sections/popular-categories.scss";
 
 
 const CategoryCard = ({ title, image }) => {

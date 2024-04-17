@@ -1,4 +1,4 @@
-import "@styles/pages/Sections/first-block.scss";
+import "@styles/pages/Home/Sections/first-block.scss";
 import FirstSectionImg from "@images/gaming-laptops-og-image.webp";
 
 const FirtstBlock = () => {

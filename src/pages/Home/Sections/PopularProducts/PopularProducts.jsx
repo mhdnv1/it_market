@@ -1,18 +1,18 @@
-import "@styles/pages/Home/Sections/discounts.scss";
-import { Link } from "react-router-dom";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import "@styles/pages/Home/Sections/popular-products.scss";
+import ProductCard from "../InStockProducts/ProductCard/ProductCard";
 import { useGetProductsQuery } from "@store/product";
-import DiscountCard from "./DiscountCard/DiscountCard";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
-const Discounts = () => {
+const PopularProducts = () => {
   const { data, isLoading, error } = useGetProductsQuery();
 
   return (
-    <section className="discounts">
+    <section className="popular-products">
       <div className="container">
         <div className="section-title">
           <h2>
-            Скидки <span>%</span>{" "}
+            Популярное{" "}
             <Link>
               Все товары в категории <HiOutlineArrowLongRight />
             </Link>
@@ -29,13 +29,11 @@ const Discounts = () => {
               .slice(0, 4)
               .map((item) => (
                 <div className="col-4" key={item.id}>
-                  <DiscountCard
+                  <ProductCard
                     title={item.model}
                     description={item.description}
                     newPrice={item.price}
                     image={item.img}
-                    discount="12"
-                    oldPrice="10000"
                   />
                 </div>
               ))
@@ -46,4 +44,4 @@ const Discounts = () => {
   );
 };
 
-export default Discounts;
+export default PopularProducts;

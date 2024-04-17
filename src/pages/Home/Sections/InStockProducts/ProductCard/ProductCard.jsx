@@ -1,17 +1,10 @@
-import PropTypes from "prop-types";
 import { BiCartAdd } from "react-icons/bi";
-import "@styles/pages/Home/Sections/discounts.scss";
+import PropTypes from "prop-types";
+import "@styles/pages/Home/Sections/products.scss"
 
-const DiscountCard = ({
-  title,
-  discount,
-  description,
-  newPrice,
-  oldPrice,
-  image,
-}) => {
+const ProductCard = ({ title, description, newPrice, image }) => {
   return (
-    <div className="discount-card card">
+    <div className="products-card card">
       <div className="row">
         <div className="col-6">
           <div className="card-img">
@@ -19,10 +12,8 @@ const DiscountCard = ({
           </div>
         </div>
         <div className="col-6">
-          <span className="percent">{discount}%</span>
           <h4>{title}</h4>
           <p>{description}</p>
-          <small>{oldPrice} сом.</small>
           <h3>
             <b>{newPrice} сом.</b>
           </h3>
@@ -35,13 +26,11 @@ const DiscountCard = ({
   );
 };
 
-DiscountCard.propTypes = {
+ProductCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  discount: PropTypes.number,
   description: PropTypes.string.isRequired,
   newPrice: PropTypes.number.isRequired,
-  oldPrice: PropTypes.number,
 };
 
-export default DiscountCard;
+export default ProductCard;

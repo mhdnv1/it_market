@@ -2,7 +2,10 @@
 import { useGetProductsQuery } from "../../store/product";
 import Discounts from "./Sections/Discounts/Discounts";
 import FirtstBlock from "./Sections/FirstSection/FirtstBlock";
+import InStockProducts from "./Sections/InStockProducts/InStockProducts";
 import PopularCategories from "./Sections/PopularCategories/PopularCategories";
+import "@styles/pages/Home/home.scss"
+import PopularProducts from "./Sections/PopularProducts/PopularProducts";
 
 const Home = () => {
   const { data, error, isLoading } = useGetProductsQuery();
@@ -13,6 +16,8 @@ const Home = () => {
         <FirtstBlock />
         <PopularCategories/> 
         <Discounts/>
+        <InStockProducts/>
+        <PopularProducts/>
         {error ? (
           <>Oh no, there was an error</>
         ) : isLoading ? (

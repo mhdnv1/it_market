@@ -1,6 +1,7 @@
 .discounts {
   .row {
     justify-content: space-between;
+    flex-wrap: wrap;
     .col-4 {
       width: 24%;
     }
@@ -32,7 +33,6 @@
   will-change: contents;
   .row {
     flex-direction: column;
-
     h4 {
       text-transform: uppercase;
       font-weight: 400;
@@ -75,8 +75,24 @@
       color: #f00;
       font-weight: 700;
     }
+    .add-to-cart {
+      background-color: #ff9900;
+      width: 35px;
+      height: 35px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      margin-left: auto;
+      cursor: pointer;
+      svg {
+        width: 60%;
+        height: 60%;
+        fill: #fff;
+      }
+    }
   }
-
-  
 }
-
