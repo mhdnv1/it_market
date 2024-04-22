@@ -25,7 +25,7 @@ const InStockProducts = () => {
             <>Загрузка...</>
           ) : (
             [...data]
-              .filter((item) => item.type == "phone")
+              .filter((item) => item.type == "phone" || item.type == "laptop")
               .sort(() => Math.random() - 0.5)
               .slice(0, 12)
               .map((item) => (
