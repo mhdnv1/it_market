@@ -46,3 +46,40 @@
     }
   }
 }
+
+// Adaptive
+
+@media screen and (max-width: 768px) {
+  .header-bottom {
+    padding-block: 5px;
+    .row {
+      .search-bar {
+        width: 50vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .header-bottom {
+    .row {
+      .col-6:first-child {
+        gap: 10px;
+      }
+      .col-6:last-child {
+        gap: 15px;
+      }
+      .search-bar {
+        input {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .header-bottom {
+    display: none;
+  }
+}

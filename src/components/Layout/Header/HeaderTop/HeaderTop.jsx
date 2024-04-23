@@ -22,7 +22,7 @@ const HeaderTop = () => {
           </div>
           <div className="col-4">
             <div className="contacts">
-              <p>+ 375 736 463 64 72 <span>/</span> + 375 736 463 64 72</p>
+              <p>+ 375 736 463 64 72</p>
               <Link>Заказать звонок</Link>
             </div>
           </div>
