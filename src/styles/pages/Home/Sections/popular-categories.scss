@@ -36,3 +36,23 @@
     }
   }
 }
+
+@media screen and (max-width: 590px) {
+  .popular-categories {
+    .row {
+      justify-content: space-between;
+      .col-4 {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .popular-categories {
+    padding: 0 10px;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

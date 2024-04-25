@@ -10,6 +10,7 @@ const DiscountCard = ({
   oldPrice,
   image,
 }) => {
+
   return (
     <div className="discount-card card">
       <div className="row">

@@ -27,7 +27,7 @@ const InStockProducts = () => {
             [...data]
               .filter((item) => item.type == "phone" || item.type == "laptop")
               .sort(() => Math.random() - 0.5)
-              .slice(0, 12)
+              .slice(0, 6)
               .map((item) => (
                 <div className="col-4" key={item.id}>
                   <ProductCard
