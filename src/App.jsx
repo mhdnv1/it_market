@@ -1,4 +1,7 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import Cart from "./pages/Cart/Cart";
 import Catalog from "./pages/Catalog/Catalog";
 import Contacts from "./pages/Contacts/Contacts";
@@ -8,7 +11,10 @@ import Services from "./pages/Services/Services";
 import "./styles/style.scss";
 import Layout from "./components/Layout/layout";
 import NotFound from "./pages/NotFound/NotFound";
-function App() {
+
+const App = () => {
+
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -50,6 +56,6 @@ function App() {
       <RouterProvider router={router} />
     </>
   );
-}
+};
 
 export default App;

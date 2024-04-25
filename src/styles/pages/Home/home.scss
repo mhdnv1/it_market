@@ -6,3 +6,9 @@
     box-shadow: 0px 0px 30px 0px #0000000f inset;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  main{
+    padding-inline: 10px;
+  }
+}

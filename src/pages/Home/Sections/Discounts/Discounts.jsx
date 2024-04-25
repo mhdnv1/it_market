@@ -34,8 +34,8 @@ const Discounts = () => {
                     description={item.description}
                     newPrice={item.price}
                     image={item.img}
-                    discount="12"
-                    oldPrice="10000"
+                    discount={12}
+                    oldPrice={10000}
                   />
                 </div>
               ))

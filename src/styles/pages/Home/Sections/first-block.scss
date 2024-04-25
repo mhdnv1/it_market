@@ -16,7 +16,8 @@
       margin-top: 30px;
       li {
         font-size: 1.2rem;
-        list-style-position: inside;
+        list-style-position: outside;
+        margin-left: 20px;
         list-style-type: disc;
         margin-bottom: 0.8rem;
         color: #ff9900;
@@ -138,22 +139,22 @@
       gap: 10px;
       .col-4,
       .col-8 {
-        width: 95%;
+        width: 100%;
       }
       .col-4 {
         .furniture {
           border-radius: 30px;
-          padding: 20px 30px;
+          padding: 30px;
         }
         h1 {
-          font-size: 6vw;
+          font-size: 9vw;
         }
         ul {
           margin-top: 10px;
           li {
             font-size: 4vw;
             margin-left: 10px;
-            list-style-position: outside;
+            text-wrap: balance;
           }
         }
         button {
@@ -189,13 +190,13 @@
           padding: 20px;
         }
         h1 {
-          font-size: 5vw;
+          font-size: 9vw;
         }
         ul {
           margin: 10px 0;
           li {
             margin-bottom: 5px;
-            font-size: 2.8vw;
+            font-size: 4vw;
           }
         }
         button {

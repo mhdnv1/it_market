@@ -32,7 +32,7 @@
     justify-content: center;
     img {
       margin-bottom: 10px;
-      width: 65%;
+      width: 70%;
     }
   }
 }
@@ -50,7 +50,6 @@
 
 @media screen and (max-width: 400px) {
   .popular-categories {
-    padding: 0 10px;
     h2 {
       font-size: 1.5rem;
     }

@@ -1,0 +1,73 @@
+.contacts-page {
+  width: 95%;
+  margin: 0 auto;
+  .row {
+padding-block: 100px;
+    display: flex;
+    align-items: center;
+    .col-6 {
+      width: 50%;
+      .title {
+        font-family: "Jost";
+        margin-bottom: 20px;
+        font-size: 60px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          list-style: inside;
+          font-size: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts-page {
+    .row {
+      .col-6 {
+        .title {
+          font-size: 40px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          li {
+            list-style: inside;
+            font-size: 18px;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .contacts-page {
+    .title{
+        font-size: 50px !important;
+    }
+    .row {
+      flex-wrap: wrap;
+      .col-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+}

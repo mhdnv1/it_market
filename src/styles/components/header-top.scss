@@ -2,6 +2,9 @@
   padding: 3vh;
   background: #f8f8f8;
   display: flex;
+  top: -200px;
+  transition: all .3s;
+  z-index: 999;
   align-items: center;
   .row {
     justify-content: space-between;
@@ -37,6 +40,13 @@
       }
     }
   }
+}
+
+.header-top.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 1082px) {
