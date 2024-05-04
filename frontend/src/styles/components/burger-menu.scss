@@ -1,0 +1,92 @@
+.burger-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0px;
+  display: flex;
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.burger_hide {
+  transition: all 0.3s;
+  width: 0;
+  left: -380px;
+}
+
+.burger_show {
+  opacity: 1;
+  left: 0;
+}
+
+.burger_hide .blur {
+  width: 0;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  position: absolute;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  position: relative;
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    .cross {
+      position: absolute;
+      top: 15%;
+      right: 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.menu-content {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0px;
+  padding-block: 40px;
+  padding-left: 5%;
+  background-color: #fff;
+  font-size: 18px;
+  h2 {
+    font-size: 36px;
+  }
+  a {
+    color: #000;
+    font-family: "Jost";
+  }
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 570px) {
+    h2{
+      font-size: 28px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
+}
+
+.thin-links {
+  margin-top: 20px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}

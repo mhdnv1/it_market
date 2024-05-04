@@ -1,0 +1,90 @@
+.popular-products {
+  margin-top: 80px;
+  .row {
+    gap: 2%;
+    flex-wrap: wrap;
+    .col-4 {
+      width: 32%;
+      margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: "Jost";
+    span {
+      color: red;
+    }
+    a {
+      margin-left: 10px;
+      font-size: 1rem;
+      color: #000;
+      font-weight: 400;
+      svg {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popular-products {
+    .row {
+      justify-content: space-between;
+      .col-4 {
+        margin-bottom: 20px;
+        width: 49%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .popular-products {
+    .row {
+      .col-4 {
+        b {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .popular-products {
+    .row {
+      justify-content: center;
+      .col-4 {
+        width: 98%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .popular-products {
+    h2 {
+      font-size: 1.4rem;
+    }
+    .row {
+      .col-4 {
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .popular-products {
+    h2 {
+      font-size: 1.5rem;
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

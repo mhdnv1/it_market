@@ -1,0 +1,152 @@
+.discounts {
+  .row {
+    gap: 2%;
+    flex-wrap: wrap;
+    .col-4 {
+      width: 32%;
+      margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: "Jost";
+    span {
+      color: red;
+    }
+    a {
+      margin-left: 10px;
+      font-size: 1rem;
+      color: #000;
+      font-weight: 400;
+      svg {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.discount-card {
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  will-change: contents;
+  .row {
+    height: 100%;
+    align-content: space-between;
+    h4 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 40px;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-6 {
+      width: 100%;
+    }
+    p {
+      height: 65px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(180deg, transparent, #fff 90%);
+      }
+    }
+
+    small {
+      text-decoration: line-through;
+      opacity: 0.7;
+      font-weight: 500;
+      height: 16px;
+      display: inline-block;
+    }
+
+    b {
+      font-size: 1.6rem;
+      line-height: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .percent {
+      line-height: 30px;
+      width: 20%;
+      color: #f00;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .discounts {
+    .row {
+      justify-content: space-between;
+      .col-4 {
+        margin-bottom: 20px;
+        width: 49%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .discounts {
+    .row {
+      .col-4 {
+        b {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .discounts {
+    .row {
+      justify-content: center;
+      .col-4 {
+        width: 98%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .discounts {
+    h2 {
+      font-size: 1.6rem;
+    }
+    .row {
+      .col-4 {
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .discounts {
+    h2 {
+      font-size: 1.5rem;
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
