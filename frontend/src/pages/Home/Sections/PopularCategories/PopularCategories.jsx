@@ -1,6 +1,6 @@
 import "@styles/pages/Home/Sections/popular-categories.scss";
 import CategoryCard from "./CategoryCard/CategoryCard";
-import { useGetCategoriesQuery } from "@store/categories";
+import { useGetCategoriesQuery } from "@store/products";
 
 const PopularCategories = () => {
   const { data, isLoading, error } = useGetCategoriesQuery();

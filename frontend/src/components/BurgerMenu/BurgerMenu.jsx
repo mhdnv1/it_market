@@ -28,7 +28,7 @@ const BurgerMenu = ({ items }) => {
           {items
             .filter((item) => item.type == "bold")
             .map((item, id) => (
-              <li key={id}>
+              <li key={id} onClick={handleCloseBurger}>
                 <h2>
                   <Link to={item.link}>{item.value}</Link>
                 </h2>
@@ -39,7 +39,7 @@ const BurgerMenu = ({ items }) => {
           {items
             .filter((item) => item.type == "thin")
             .map((item, id) => (
-              <li key={id}>
+              <li key={id} onClick={handleCloseBurger}>
                 <Link to={item.link}>{item.value}</Link>
               </li>
             ))}

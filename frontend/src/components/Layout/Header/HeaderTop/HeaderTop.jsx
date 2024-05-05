@@ -1,25 +1,25 @@
 import "@styles/components/header-top.scss";
 import Logo from "@ui/Logo";
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderTop = () => {
-
-  const ref = useRef(null)
-  console.log(ref);
+  const ref = useRef(null);
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.matchMedia("(min-width: 1024px)").matches) {
-        const headerHeight = 1.7 * ref.current.offsetHeight
+        const headerHeight = 1.7 * ref.current.offsetHeight;
         if (window.scrollY > headerHeight) {
-          ref.current.classList.add("fixed")
+          ref.current.classList.add("fixed");
         } else {
-          ref.current.classList.remove("fixed")
+          ref.current.classList.remove("fixed");
         }
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className="header-top" ref={ref}>
@@ -31,8 +31,34 @@ const HeaderTop = () => {
           <div className="col-4">
             <nav>
               <div className="links">
-                <Link to="catalog">Каталог</Link>
-                <Link to="contacts">Контакты</Link>
+                <Link
+                  to="/"
+                  className={location.pathname == "/" ? "active_nav" : ""}
+                >
+                  Главная
+                </Link>
+                <Link
+                  to="catalog"
+                  className={location.pathname == "/catalog" ? "active_nav" : ""}
+                >
+                  Каталог
+                </Link>
+                <Link
+                  to="discounts"
+                  className={
+                    location.pathname == "/discounts" ? "active_nav" : ""
+                  }
+                >
+                  Скидки
+                </Link>
+                <Link
+                  to="contacts"
+                  className={
+                    location.pathname == "/contacts" ? "active_nav" : ""
+                  }
+                >
+                  Контакты
+                </Link>
               </div>
             </nav>
           </div>

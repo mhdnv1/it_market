@@ -6,10 +6,9 @@ import Product from "./pages/Product/Product";
 import "./styles/style.scss";
 import Layout from "./components/Layout/layout";
 import NotFound from "./pages/NotFound/NotFound";
-import { useGetCategoriesQuery } from "@store/categories";
+import Discounts from "@pages/DiscountsPage/Discounts";
 
 const App = () => {
-  const { data, isLoading, error } = useGetCategoriesQuery();
   const router = createBrowserRouter([
     {
       path: "/",
@@ -22,21 +21,25 @@ const App = () => {
         {
           path: "/catalog",
           element: (
-            <Catalog
-              categories={data}
-              categoriesIsLoading={isLoading}
-              categoriesError={error}
-            />
+            <Catalog/>
           ),
         },
         {
           path: "/catalog/:category",
           element: (
-            <Catalog
-              categories={data}
-              categoriesIsLoading={isLoading}
-              categoriesError={error}
-            />
+            <Catalog/>
+          ),
+        },
+        {
+          path: "/discounts",
+          element: (
+            <Discounts/>
+          ),
+        },
+        {
+          path: "/discounts/:category",
+          element: (
+            <Discounts/>
           ),
         },
         {

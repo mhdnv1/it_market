@@ -1,7 +1,7 @@
 import "@styles/pages/Home/Sections/discounts.scss";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { useGetProductsQuery } from "@store/product";
+import { useGetProductsQuery } from "@store/products";
 import Card from "../../../../components/Card/Card";
 
 const Discounts = () => {

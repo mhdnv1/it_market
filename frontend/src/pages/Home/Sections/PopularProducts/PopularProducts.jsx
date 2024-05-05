@@ -1,5 +1,5 @@
 import "@styles/pages/Home/Sections/popular-products.scss";
-import { useGetProductsQuery } from "@store/product";
+import { useGetProductsQuery } from "@store/products";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import Card from "../../../../components/Card/Card";

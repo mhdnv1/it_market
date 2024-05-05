@@ -1,4 +1,16 @@
 .catalog {
+  .categories_title {
+    margin-bottom: 10px;
+  }
+  .search_result {
+    margin-bottom: 20px;
+  }
+  .active_cat {
+    button {
+      color: #ff9900 !important;
+      transform: scale(1.06);
+    }
+  }
   .row {
     gap: 2%;
     flex-wrap: wrap;
@@ -21,14 +33,14 @@
       color: #7d7d7d;
       font-weight: 500;
       margin-bottom: 10px;
-      transition: all .5s;
+      transition: all 0.5s;
       will-change: contents;
       outline: none;
       font-size: 1.1rem;
       cursor: pointer;
-      &:hover{
-        color: #FF9900;
-        transform: scale(1.06);
+      &:hover {
+        color: #ff9900;
+        transform: scale(1.1);
       }
     }
   }

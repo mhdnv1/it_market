@@ -3,11 +3,19 @@ import BurgerButton from "@ui/BurgerButton";
 import SearchIcon from "@ui/SearchIcon";
 import { useDispatch } from "react-redux";
 import { toggleBurger } from "@store/burgerMenuSlice";
+import { setSearch } from "@store/searchSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeaderBottom = () => {
   const dispatch = useDispatch();
   const handleShowBurger = () => {
     dispatch(toggleBurger(true));
+  };
+
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    dispatch(setSearch(e.target.value));
   };
 
   return (
@@ -26,8 +34,14 @@ const HeaderBottom = () => {
                 name="search"
                 id="search"
                 placeholder="Что желаете найти?"
+                onKeyDown={(e) => {
+                  e.key === "Enter" && navigate("catalog");
+                }}
+                onChange={handleSearch}
               />
-              <SearchIcon />
+              <Link to="catalog">
+                <SearchIcon />
+              </Link>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ const Layout = () => {
   const MockItems = [
     { value: "Каталог", link: "catalog", type: "bold" },
     { value: "Товары в наличии", link: "catalog", type: "bold" },
-    { value: "Скидки", link: "catalog", type: "bold" },
+    { value: "Скидки", link: "discounts", type: "bold" },
     { value: "Популярное", link: "catalog", type: "bold" },
     { value: "Контакты", link: "contacts", type: "thin" },
   ];

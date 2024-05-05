@@ -129,6 +129,39 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .first-block {
+    .row {
+      .col-8{
+        img{
+          border-radius: 35px;
+        }
+      }
+      .col-4 {
+        .furniture {
+          border-radius: 35px;
+          padding: 3vw;
+        }
+        h1 {
+          line-height: normal;
+          font-size: 1rem;
+        }
+        ul {
+          margin-top: 1vw;
+          li {
+            font-size: 1.5vw;
+          }
+        }
+        button {
+          padding: 10px;
+          font-size: 0.8rem;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 590px) {
   .first-block {
     margin-top: 10px;

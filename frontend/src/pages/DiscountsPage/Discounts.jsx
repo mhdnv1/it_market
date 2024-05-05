@@ -5,9 +5,8 @@ import "@styles/pages/Home/Sections/products.scss";
 import Card from "@components/Card/Card";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
-import { useState } from "react";
 
-const Catalog = () => {
+const Discounts = () => {
   const {
     data: products,
     isLoading: productsIsLoading,
@@ -19,22 +18,19 @@ const Catalog = () => {
     error: categoriesError,
   } = useGetCategoriesQuery();
   const { category } = useParams();
-  const [activeCat, setActiveCat] = useState("Все");
   const search = useSelector((state) => state.search.search);
   return (
     <main>
       <section className="catalog">
         <div className="catalog">
           <div className="container">
-            <h1>Каталог</h1>
+            <h1>
+              Скидки! <span className="percent">%</span>
+            </h1>
             <h3 className="categories_title">Категории:</h3>
             <div className="category_select">
-              <Link
-                to="/catalog/"
-                onClick={() => setActiveCat("Все")}
-                className={activeCat == "Все" ? "active_cat" : ""}
-              >
-                <button>Все</button>
+              <Link to="/discounts/">
+                <button>Все скидки</button>
               </Link>
               {categoriesError ? (
                 ""
@@ -42,12 +38,7 @@ const Catalog = () => {
                 <>Загрузка...</>
               ) : (
                 categories.map((item) => (
-                  <Link
-                    key={item.id}
-                    to={`/catalog/${item.id}`}
-                    onClick={() => setActiveCat(item.name)}
-                    className={activeCat == item.name ? "active_cat" : ""}
-                  >
+                  <Link key={item.id} to={`/discounts/${item.id}`}>
                     <button>{item.name}</button>
                   </Link>
                 ))
@@ -65,6 +56,7 @@ const Catalog = () => {
                 products
                   .filter(
                     (item) =>
+                      item.discount &
                       (item.category == category) &
                       item.title.toLowerCase().includes(search.toLowerCase())
                   )
@@ -81,8 +73,10 @@ const Catalog = () => {
                   ))
               ) : (
                 products
-                  .filter((item) =>
-                    item.title.toLowerCase().includes(search.toLowerCase())
+                  .filter(
+                    (item) =>
+                      item.discount &
+                      item.title.toLowerCase().includes(search.toLowerCase())
                   )
                   .map((item) => (
                     <div className="col-4" key={item.id}>
@@ -104,10 +98,10 @@ const Catalog = () => {
   );
 };
 
-Catalog.propTypes = {
+Discounts.propTypes = {
   categories: PropTypes.array,
   categoriesIsLoading: PropTypes.bool,
   categoriesError: PropTypes.any,
 };
 
-export default Catalog;
+export default Discounts;
