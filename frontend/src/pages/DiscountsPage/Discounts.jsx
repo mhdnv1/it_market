@@ -5,6 +5,7 @@ import "@styles/pages/Home/Sections/products.scss";
 import Card from "@components/Card/Card";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
+import Loader from "@components/Loader/Loader";
 
 const Discounts = () => {
   const {
@@ -35,7 +36,7 @@ const Discounts = () => {
               {categoriesError ? (
                 ""
               ) : categoriesIsLoading ? (
-                <>Загрузка...</>
+                <Loader />
               ) : (
                 categories.map((item) => (
                   <Link key={item.id} to={`/discounts/${item.id}`}>
@@ -51,7 +52,7 @@ const Discounts = () => {
               {productsError ? (
                 <h2>Ничего не найдено.</h2>
               ) : productsIsLoading ? (
-                <>Загрузка...</>
+                <Loader />
               ) : category ? (
                 products
                   .filter(

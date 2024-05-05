@@ -1,5 +1,6 @@
 import "@styles/pages/Home/Sections/first-block.scss";
 import FirstSectionImg from "@images/gaming-laptops-og-image.webp";
+import { Link } from "react-router-dom";
 
 const FirtstBlock = () => {
   return (
@@ -20,7 +21,9 @@ const FirtstBlock = () => {
                   <span>Бюджетные - для учебы и работы</span>
                 </li>
               </ul>
-              <button className="button__orange">Перейти в каталог</button>
+              <Link to="/catalog">
+                <button className="button__orange">Перейти в каталог</button>
+              </Link>
             </div>
           </div>
           <div className="col-8">

@@ -3,9 +3,10 @@ import { useGetProductsQuery } from "@store/products";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import Card from "@components/Card/Card";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import Loader from "@components/Loader/Loader";
 
-const PopularProducts = ({title}) => {
+const PopularProducts = ({ title }) => {
   const { data, isLoading, error } = useGetProductsQuery();
 
   return (
@@ -23,7 +24,7 @@ const PopularProducts = ({title}) => {
           {error ? (
             <h2>Ничего не найдено.</h2>
           ) : isLoading ? (
-            <>Загрузка...</>
+            <Loader />
           ) : (
             [...data]
               .sort(() => Math.random() - 0.5)
@@ -48,7 +49,7 @@ const PopularProducts = ({title}) => {
 };
 
 PopularProducts.propTypes = {
-  title: PropTypes.string.isRequired
-}
+  title: PropTypes.string.isRequired,
+};
 
 export default PopularProducts;

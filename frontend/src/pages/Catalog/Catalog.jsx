@@ -6,6 +6,7 @@ import Card from "@components/Card/Card";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import Loader from "@components/Loader/Loader";
 
 const Catalog = () => {
   const {
@@ -40,7 +41,7 @@ const Catalog = () => {
               {categoriesError ? (
                 ""
               ) : categoriesIsLoading ? (
-                <>Загрузка...</>
+                <Loader/>
               ) : (
                 categories.map((item) => (
                   <Link
@@ -61,7 +62,7 @@ const Catalog = () => {
               {productsError ? (
                 <h2>Ничего не найдено.</h2>
               ) : productsIsLoading ? (
-                <>Загрузка...</>
+                <Loader/>
               ) : category ? (
                 products
                   .filter(

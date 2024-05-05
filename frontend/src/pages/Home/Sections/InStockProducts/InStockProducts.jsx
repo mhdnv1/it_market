@@ -3,6 +3,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import "@styles/pages/Home/Sections/products.scss";
 import Card from "../../../../components/Card/Card";
+import Loader from "@components/Loader/Loader";
 
 const InStockProducts = () => {
   const { data, isLoading, error } = useGetProductsQuery();
@@ -22,7 +23,7 @@ const InStockProducts = () => {
           {error ? (
             <h2>Ничего не найдено.</h2>
           ) : isLoading ? (
-            <>Загрузка...</>
+            <Loader />
           ) : (
             [...data]
               .sort(() => Math.random() - 0.5)

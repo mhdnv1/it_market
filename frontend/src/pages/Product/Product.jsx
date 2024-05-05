@@ -1,3 +1,4 @@
+import Loader from "@components/Loader/Loader";
 import PopularProducts from "@pages/Home/Sections/PopularProducts/PopularProducts";
 import { useGetProductQuery } from "@store/products";
 import "@styles/pages/Product/product.scss";
@@ -16,7 +17,7 @@ const Product = () => {
           {error ? (
             <h1>Произошла ошибка, повторите запрос позднее</h1>
           ) : isLoading ? (
-            <h1>Загрузка...</h1>
+            <Loader />
           ) : (
             <div className="row">
               <div className="col-6">
@@ -59,9 +60,9 @@ const Product = () => {
           )}
         </div>
       </section>
-          <div className="recomendations">
-            <PopularProducts title="Вам также может понравиться: " />
-          </div>
+      <div className="recomendations">
+        <PopularProducts title="Вам также может понравиться: " />
+      </div>
     </main>
   );
 };

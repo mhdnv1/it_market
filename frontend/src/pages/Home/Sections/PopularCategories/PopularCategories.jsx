@@ -1,6 +1,7 @@
 import "@styles/pages/Home/Sections/popular-categories.scss";
 import CategoryCard from "./CategoryCard/CategoryCard";
 import { useGetCategoriesQuery } from "@store/products";
+import Loader from "@components/Loader/Loader";
 
 const PopularCategories = () => {
   const { data, isLoading, error } = useGetCategoriesQuery();
@@ -15,7 +16,7 @@ const PopularCategories = () => {
           {error ? (
             <h2>Ничего не найдено.</h2>
           ) : isLoading ? (
-            <>Загрузка...</>
+            <Loader />
           ) : (
             data.map((item, i) => (
               <div className="col-4" key={i}>

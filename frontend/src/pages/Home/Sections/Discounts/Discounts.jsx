@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { useGetProductsQuery } from "@store/products";
 import Card from "../../../../components/Card/Card";
+import Loader from "@components/Loader/Loader";
 
 const Discounts = () => {
   const { data, isLoading, error } = useGetProductsQuery();
@@ -22,7 +23,7 @@ const Discounts = () => {
           {error ? (
             <h2>Ничего не найдено.</h2>
           ) : isLoading ? (
-            <>Загрузка...</>
+            <Loader />
           ) : (
             [...data]
               .filter((item) => item.discount > 0)
