@@ -20,27 +20,19 @@ const App = () => {
         },
         {
           path: "/catalog",
-          element: (
-            <Catalog/>
-          ),
+          element: <Catalog />,
         },
         {
           path: "/catalog/:category",
-          element: (
-            <Catalog/>
-          ),
+          element: <Catalog />,
         },
         {
           path: "/discounts",
-          element: (
-            <Discounts/>
-          ),
+          element: <Discounts />,
         },
         {
           path: "/discounts/:category",
-          element: (
-            <Discounts/>
-          ),
+          element: <Discounts />,
         },
         {
           path: "/contacts",
@@ -50,11 +42,11 @@ const App = () => {
           path: "/product/:id",
           element: <Product />,
         },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
       ],
-    },
-    {
-      path: "*",
-      element: <NotFound />,
     },
   ]);
   return (

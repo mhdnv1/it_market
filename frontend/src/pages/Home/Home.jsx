@@ -14,7 +14,7 @@ const Home = () => {
         <PopularCategories/> 
         <Discounts/>
         <InStockProducts/>
-        <PopularProducts/>
+        <PopularProducts title="Популярное"/>
       </div>
     </main>
   );

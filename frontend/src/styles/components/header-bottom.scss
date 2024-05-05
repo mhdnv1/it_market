@@ -8,7 +8,7 @@
     .col-6 {
       display: flex;
       align-items: center;
-      .burger_button{
+      .burger_button {
         border: none;
         background-color: transparent;
       }
@@ -34,7 +34,7 @@
     will-change: contents;
     &:hover {
       transform: scale(1.005);
-      box-shadow: 0px 0px 30px 0px #0000000f inset;
+      box-shadow: 0px 0px 5px 0px #ff99004d inset;
     }
     input {
       width: 97%;
@@ -47,14 +47,14 @@
       font-size: 1.2rem;
       @media screen and (max-width: 425px) {
         padding-inline: 15px;
-        font-size: .9rem !important;
+        font-size: 0.9rem !important;
       }
       &::-webkit-search-cancel-button {
         appearance: none;
       }
     }
     @media screen and (max-width: 425px) {
-      .search-icon{
+      .search-icon {
         right: 15px;
       }
     }
@@ -71,6 +71,11 @@
 
 @media screen and (max-width: 590px) {
   .header-bottom {
+    padding-inline: 3vw;
+    .container {
+      max-width: 100%;
+      width: 100%;
+    }
     .row {
       .col-6:first-child {
         gap: 10px;

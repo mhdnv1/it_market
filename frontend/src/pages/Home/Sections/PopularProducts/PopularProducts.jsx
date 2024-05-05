@@ -2,9 +2,10 @@ import "@styles/pages/Home/Sections/popular-products.scss";
 import { useGetProductsQuery } from "@store/products";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-import Card from "../../../../components/Card/Card";
+import Card from "@components/Card/Card";
+import PropTypes from 'prop-types'
 
-const PopularProducts = () => {
+const PopularProducts = ({title}) => {
   const { data, isLoading, error } = useGetProductsQuery();
 
   return (
@@ -12,7 +13,7 @@ const PopularProducts = () => {
       <div className="container">
         <div className="section-title">
           <h2>
-            Популярное{" "}
+            {title}{" "}
             <Link to="catalog">
               Все товары в категории <HiOutlineArrowLongRight />
             </Link>
@@ -30,6 +31,7 @@ const PopularProducts = () => {
               .map((item) => (
                 <div className="col-4" key={item.id}>
                   <Card
+                    id={item.id}
                     title={item.title}
                     description={item.description}
                     discount={item.discount}
@@ -44,5 +46,9 @@ const PopularProducts = () => {
     </section>
   );
 };
+
+PopularProducts.propTypes = {
+  title: PropTypes.string.isRequired
+}
 
 export default PopularProducts;

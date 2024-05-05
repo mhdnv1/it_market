@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useGetCategoriesQuery, useGetProductsQuery } from "@store/products";
 import "@styles/pages/Catalog/catalog.scss";
 import "@styles/pages/Home/Sections/products.scss";
@@ -19,7 +19,8 @@ const Catalog = () => {
     error: categoriesError,
   } = useGetCategoriesQuery();
   const { category } = useParams();
-  const [activeCat, setActiveCat] = useState("Все");
+  const location = useLocation()
+  const [activeCat, setActiveCat] = useState(location.pathname);
   const search = useSelector((state) => state.search.search);
   return (
     <main>
@@ -31,8 +32,8 @@ const Catalog = () => {
             <div className="category_select">
               <Link
                 to="/catalog/"
-                onClick={() => setActiveCat("Все")}
-                className={activeCat == "Все" ? "active_cat" : ""}
+                onClick={() => setActiveCat("/catalog/")}
+                className={activeCat == /catalog/ ? "active_cat" : ""}
               >
                 <button>Все</button>
               </Link>
@@ -45,8 +46,8 @@ const Catalog = () => {
                   <Link
                     key={item.id}
                     to={`/catalog/${item.id}`}
-                    onClick={() => setActiveCat(item.name)}
-                    className={activeCat == item.name ? "active_cat" : ""}
+                    onClick={() => setActiveCat(`/catalog/${item.id}`)}
+                    className={activeCat == `/catalog/${item.id}` ? "active_cat" : ""}
                   >
                     <button>{item.name}</button>
                   </Link>
@@ -71,6 +72,7 @@ const Catalog = () => {
                   .map((item) => (
                     <div className="col-4" key={item.id}>
                       <Card
+                        id={item.id}
                         title={item.title}
                         description={item.description}
                         discount={item.discount}
@@ -87,6 +89,7 @@ const Catalog = () => {
                   .map((item) => (
                     <div className="col-4" key={item.id}>
                       <Card
+                        id={item.id}
                         title={item.title}
                         description={item.description}
                         discount={item.discount}

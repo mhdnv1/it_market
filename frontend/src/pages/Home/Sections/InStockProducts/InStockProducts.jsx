@@ -30,6 +30,7 @@ const InStockProducts = () => {
               .map((item) => (
                 <div className="col-4" key={item.id}>
                   <Card
+                    id={item.id}
                     title={item.title}
                     description={item.description}
                     discount={item.discount}

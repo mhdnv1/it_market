@@ -4,19 +4,17 @@ import Footer from "./Footer/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import BackToTop from "@ui/BackToTop";
 import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
-import { useSelector } from "react-redux";
 
 const Layout = () => {
   const location = useLocation();
-  const burgerState = useSelector((state) => state.burger.isActive);
-  console.log(burgerState);
 
   const MockItems = [
-    { value: "Каталог", link: "catalog", type: "bold" },
-    { value: "Товары в наличии", link: "catalog", type: "bold" },
-    { value: "Скидки", link: "discounts", type: "bold" },
-    { value: "Популярное", link: "catalog", type: "bold" },
-    { value: "Контакты", link: "contacts", type: "thin" },
+    { value: "Главная", link: "/", type: "bold" },
+    { value: "Каталог", link: "/catalog", type: "bold" },
+    { value: "Товары в наличии", link: "/catalog", type: "bold" },
+    { value: "Скидки", link: "/discounts", type: "bold" },
+    { value: "Популярное", link: "/catalog", type: "bold" },
+    { value: "Контакты", link: "/contacts", type: "thin" },
   ];
 
   useEffect(() => {
@@ -29,9 +27,11 @@ const Layout = () => {
   return (
     <React.Fragment>
       <Header />
-      <Outlet />
-      <BurgerMenu items={MockItems} />
-      <BackToTop />
+      <div className="content">
+        <Outlet />
+        <BurgerMenu items={MockItems} />
+        <BackToTop />
+      </div>
       <Footer />
     </React.Fragment>
   );

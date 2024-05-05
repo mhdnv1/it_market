@@ -18,11 +18,7 @@ const Footer = () => {
                 Все права защищены Все права защищены © 2024 интернет-магазин
                 ItMarket Кыргызстан.
               </li>
-              <li>
-                УНП 191828159 ИП Парейко В.С., регистрационный номер в торговом
-                реестре 158299
-              </li>
-              <li>Политика конфиденциальности</li>
+              <li><a href="#">Политика конфиденциальности</a></li>
             </ul>
           </div>
           <div className="col-3 col-menu">
@@ -31,17 +27,17 @@ const Footer = () => {
               <li>
                 <Link to="/">Главная</Link>
                 <span></span>
-                <Link to="catalog">Каталог</Link>
+                <Link to="/catalog">Каталог</Link>
                 <span></span>
-                <Link to="catalog">Товары в наличии</Link>
+                <Link to="/catalog">Товары в наличии</Link>
               </li>
               <li>
-                <Link to="catalog">Скидки</Link>
+                <Link to="/discounts">Скидки</Link>
                 <span></span>
-                <Link to="catalog">Популярное</Link>
+                <Link to="/catalog">Популярное</Link>
               </li>
               <li>
-                <Link to="contacts">Контакты</Link>
+                <Link to="/contacts">Контакты</Link>
               </li>
             </ul>
           </div>

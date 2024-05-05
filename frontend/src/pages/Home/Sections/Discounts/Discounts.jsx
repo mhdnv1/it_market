@@ -13,7 +13,7 @@ const Discounts = () => {
         <div className="section-title">
           <h2>
             Скидки <span>%</span>{" "}
-            <Link to="catalog">
+            <Link to="/discounts">
               Все товары в категории <HiOutlineArrowLongRight />
             </Link>
           </h2>
@@ -31,6 +31,7 @@ const Discounts = () => {
               .map((item) => (
                 <div className="col-4" key={item.id}>
                   <Card
+                    id={item.id}
                     title={item.title}
                     description={item.description}
                     price={item.price}

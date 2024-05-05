@@ -1,0 +1,205 @@
+.section-details {
+  .row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .col-6:first-child {
+      width: 55%;
+    }
+    .col-6 {
+      width: 35%;
+      .details-title {
+        h2 {
+          font-size: 1.7rem;
+        }
+        small {
+          display: block;
+          margin-bottom: 10px;
+          color: #5a5a5a;
+        }
+        .details-description {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          color: #5a5a5a;
+        }
+      }
+      .details-price {
+        margin-top: 40px;
+        h2 {
+          font-size: 2.3rem;
+        }
+        button {
+          width: 80%;
+          padding: 15px;
+          border: none;
+          font-size: 1.1rem;
+          border-radius: 30px;
+          margin-top: 15px;
+          background: #ff8a1e;
+          color: #fff;
+          cursor: pointer;
+        }
+        .details-discount {
+          display: flex;
+          margin-top: 10px;
+          gap: 5px;
+          align-items: flex-end;
+          b {
+            color: #ff3232;
+            font-weight: 700;
+            font-size: 1.2rem;
+          }
+          p {
+            display: inline;
+            text-decoration: line-through;
+            color: #5a5a5a;
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+    .row {
+      .col-6:first-child {
+        width: 55% !important;
+      }
+      .col-6 {
+        width: 45% !important;
+        .details-price {
+          margin-top: 20px;
+          h2 {
+            font-size: 1.9rem;
+          }
+          .details-discount {
+            b {
+              font-size: 1rem;
+            }
+            p {
+              font-size: 0.8rem;
+            }
+          }
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 590px) {
+    .row {
+      .col-6 {
+        .details-description {
+          p {
+            font-size: 0.8rem !important;
+          }
+        }
+        .details-price {
+          margin-top: 5px;
+          h2 {
+            font-size: 1.3rem;
+          }
+          .details-discount {
+            b {
+              font-size: 0.8rem;
+            }
+            p {
+              font-size: 0.7rem;
+            }
+          }
+          button {
+            padding: 10px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 475px) {
+    margin-top: 15px;
+    .row {
+      .col-6:first-child {
+        width: 100% !important;
+      }
+      .col-6 {
+        width: 100% !important;
+        .details-title {
+          h2 {
+            margin-top: 25px;
+            margin-bottom: 5px;
+            font-size: 1.9rem !important;
+          }
+        }
+        .details-description {
+          p {
+            font-size: 1rem !important;
+          }
+        }
+        .details-price {
+          h2 {
+            font-size: 2rem;
+            margin-top: 25px;
+          }
+          button {
+            padding: 15px;
+          }
+          .details-discount {
+            b {
+              font-size: 1.2rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.recomendations {
+  margin-top: 100px;
+
+  .popular-products .row .col-4 {
+    width: 23%;
+  }
+  h1 {
+    font-family: "Jost";
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .popular-products {
+      .row {
+        justify-content: space-between;
+        .col-4 {
+          margin-bottom: 20px;
+          width: 32%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .popular-products {
+      .row {
+        .col-4 {
+          width: 48%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .popular-products {
+      .row {
+        .col-4 {
+          width: 98%;
+        }
+      }
+    }
+  }
+}

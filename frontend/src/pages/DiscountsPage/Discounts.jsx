@@ -21,7 +21,7 @@ const Discounts = () => {
   const search = useSelector((state) => state.search.search);
   return (
     <main>
-      <section className="catalog">
+      <section className="discounts">
         <div className="catalog">
           <div className="container">
             <h1>
@@ -63,6 +63,7 @@ const Discounts = () => {
                   .map((item) => (
                     <div className="col-4" key={item.id}>
                       <Card
+                        id={item.id}
                         title={item.title}
                         description={item.description}
                         discount={item.discount}
@@ -81,6 +82,7 @@ const Discounts = () => {
                   .map((item) => (
                     <div className="col-4" key={item.id}>
                       <Card
+                        id={item.id}
                         title={item.title}
                         description={item.description}
                         discount={item.discount}
