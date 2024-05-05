@@ -1,13 +1,14 @@
 import "@styles/components/header-bottom.scss";
 import BurgerButton from "@ui/BurgerButton";
 import SearchIcon from "@ui/SearchIcon";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleBurger } from "@store/burgerMenuSlice";
 import { setSearch } from "@store/searchSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 const HeaderBottom = () => {
   const dispatch = useDispatch();
+  const inputValue = useSelector((state) => state.search.search);
   const handleShowBurger = () => {
     dispatch(toggleBurger(true));
   };
@@ -37,6 +38,7 @@ const HeaderBottom = () => {
                 onKeyDown={(e) => {
                   e.key === "Enter" && navigate("catalog");
                 }}
+                value={inputValue}
                 onChange={handleSearch}
               />
               <Link to="catalog">

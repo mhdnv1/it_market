@@ -6,8 +6,6 @@ import { Link, useLocation } from "react-router-dom";
 const HeaderTop = () => {
   const ref = useRef(null);
   const location = useLocation();
-  console.log(location);
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.matchMedia("(min-width: 1024px)").matches) {

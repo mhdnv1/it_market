@@ -1,11 +1,12 @@
-import { Link, useParams } from "react-router-dom";
-import { useGetCategoriesQuery, useGetProductsQuery } from "@store/products";
+import { useParams } from "react-router-dom";
+import { useGetProductsQuery } from "@store/products";
 import "@styles/pages/Catalog/catalog.scss";
 import "@styles/pages/Home/Sections/products.scss";
 import Card from "@components/Card/Card";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import Loader from "@components/Loader/Loader";
+import CategorySelect from "@components/CategorySelect/CategorySelect";
 
 const Discounts = () => {
   const {
@@ -13,11 +14,6 @@ const Discounts = () => {
     isLoading: productsIsLoading,
     error: productsError,
   } = useGetProductsQuery();
-  const {
-    data: categories,
-    isLoading: categoriesIsLoading,
-    error: categoriesError,
-  } = useGetCategoriesQuery();
   const { category } = useParams();
   const search = useSelector((state) => state.search.search);
   return (
@@ -28,23 +24,7 @@ const Discounts = () => {
             <h1>
               Скидки! <span className="percent">%</span>
             </h1>
-            <h3 className="categories_title">Категории:</h3>
-            <div className="category_select">
-              <Link to="/discounts/">
-                <button>Все скидки</button>
-              </Link>
-              {categoriesError ? (
-                ""
-              ) : categoriesIsLoading ? (
-                <Loader />
-              ) : (
-                categories.map((item) => (
-                  <Link key={item.id} to={`/discounts/${item.id}`}>
-                    <button>{item.name}</button>
-                  </Link>
-                ))
-              )}
-            </div>
+            <CategorySelect path="discounts"/>
             {search && (
               <h2 className="search_result">Результаты по поиску: {search}</h2>
             )}
@@ -54,7 +34,8 @@ const Discounts = () => {
               ) : productsIsLoading ? (
                 <Loader />
               ) : category ? (
-                products
+                [...products]
+                  .reverse()
                   .filter(
                     (item) =>
                       item.discount &
@@ -74,7 +55,8 @@ const Discounts = () => {
                     </div>
                   ))
               ) : (
-                products
+                [...products]
+                  .reverse()
                   .filter(
                     (item) =>
                       item.discount &
