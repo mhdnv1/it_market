@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import BackToTop from "@ui/BackToTop";
 import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 
 const Layout = () => {
-  const location = useLocation();
-
   const MockItems = [
     { value: "Главная", link: "/", type: "bold" },
     { value: "Каталог", link: "/catalog", type: "bold" },
@@ -16,13 +14,6 @@ const Layout = () => {
     { value: "Популярное", link: "/catalog", type: "bold" },
     { value: "Контакты", link: "/contacts", type: "thin" },
   ];
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, [location.key]);
 
   return (
     <React.Fragment>
