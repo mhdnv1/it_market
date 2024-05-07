@@ -62,7 +62,7 @@ const HeaderTop = () => {
           </div>
           <div className="col-4">
             <div className="contacts">
-              <p><a href="tel:+996779740794">+996 779 740-794</a></p>
+              <p><a href="tel:+996779740794">+996779740794</a></p>
             </div>
           </div>
         </div>

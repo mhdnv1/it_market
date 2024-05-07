@@ -1,4 +1,4 @@
-import Logo from "@ui/Logo";
+import Logo from "@ui/Logo"
 import "@styles/components/footer.scss";
 import InstagramBtn from "@ui/InstagramBtn";
 import { Link } from "react-router-dom";
