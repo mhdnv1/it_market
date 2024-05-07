@@ -1,4 +1,4 @@
-import Image from "@images/image_62-transformed.png";
+import Image from "../../assets/transformed.png";
 import "@styles/pages/Contacts/contacts.scss";
 
 const Contacts = () => {
