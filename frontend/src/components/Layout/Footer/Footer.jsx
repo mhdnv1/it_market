@@ -46,7 +46,8 @@ const Footer = () => {
             <ul>
               <li>г. Ош</li>
               <li>ТЦ &quot;Корона&quot;, 1 этаж </li>
-              <li>+996 (779) 740-794</li>
+              <li><a href="tel:+996779740794">+996 (779) 740-794</a></li>
+              <li><a href="tel:+996559740794">+996 (559) 740-794</a></li>
             </ul>
           </div>
           <div className="col-3 col-social">
