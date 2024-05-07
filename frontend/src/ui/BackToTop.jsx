@@ -1,15 +1,23 @@
 import { useEffect, useRef } from "react";
 import { PiCaretDoubleUpThin } from "react-icons/pi";
 import "@styles/ui/back-to-top.scss";
+import { useLocation } from "react-router-dom";
 
 const BackToTop = () => {
   const ref = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       ref.current.classList.toggle("active", window.scrollY > 800);
     });
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      ref.current.classList.toggle("active", window.scrollY > 800);
+    });
+  }, [location.key]);
 
   const toTop = () => {
     let currentPosition = window.scrollY;
