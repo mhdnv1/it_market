@@ -18,7 +18,7 @@ const Footer = () => {
                 Все права защищены Все права защищены © 2024 интернет-магазин
                 ItMarket Кыргызстан.
               </li>
-              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Создание сайта CODERUN.KG</a></li>
             </ul>
           </div>
           <div className="col-3 col-menu">
